@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image"; // 1. Import the Image component
 
 const OurStory = () => {
     return (
@@ -8,11 +9,15 @@ const OurStory = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image Column */}
                     <div className="order-2 lg:order-1">
-                        <div className="aspect-[4/3] max-h-[420px] rounded-2xl overflow-hidden shadow-[var(--shadow-medical)]">
-                            <img
+                        {/* 2. Add `relative` to the parent container for the `fill` prop to work */}
+                        <div className="relative aspect-[4/3] max-h-[420px] rounded-2xl overflow-hidden shadow-[var(--shadow-medical)]">
+                            {/* 3. Replace <img> with <Image> and use the `fill` prop */}
+                            <Image
                                 src="/Story&Model.png"
                                 alt="Dr. Mohamed El Shawadfy, Founder of BelManzil"
-                                className="rounded-lg shadow-2xl w-full h-[400px] object-cover transition-all duration-500"
+                                fill
+                                className="object-cover transition-all duration-500"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                         </div>
                     </div>
@@ -28,7 +33,6 @@ const OurStory = () => {
                                 <strong className="text-primary">BelManzil</strong> is Egypt’s first home dental service, founded in May 2020 with one goal: making
                                 expert dental care accessible where it’s needed most—at home.
                             </p>
-
                             <p>
                                 Whether you are facing mobility limitations, balancing family responsibilities, or simply
                                 seeking a stress-free alternative to traditional clinics, our service is designed to offer you
@@ -42,10 +46,11 @@ const OurStory = () => {
                                 effortlessly convenient.
                             </p>
                         </div>
-
-
                     </div>
                 </div>
+                
+                {/* The rest of your component remains the same... */}
+
                 <div className="border-l-4 border-state-green pl-6 bg-dutch-white/30 p-6 rounded-r-xl ">
                     <h3 className="text-xl font-semibold text-primary mb-3">
                         Our Mission
@@ -59,7 +64,7 @@ const OurStory = () => {
                         built around you.
                     </p>
                 </div>
-                {/* Our Model Section */}
+
                 <div className="mt-16 bg-card rounded-2xl p-8 lg:p-12 shadow-[var(--shadow-soft)]">
                     <h2 className="text-3xl font-bold text-primary mb-6 text-center">
                         Our Model
@@ -72,7 +77,6 @@ const OurStory = () => {
                             <strong className=""> clinical excellence</strong> to offer care that's
                             not only effective but personal and stress-free.
                         </p>
-
                         <p>
                             Equipped with advanced portable technology and a team of specialists, we provide
                             customized treatment with zero hassle, all in the comfort of your own space.
@@ -84,7 +88,6 @@ const OurStory = () => {
                         <Button asChild size="lg"
                             className="bg-[#e58754] hover:bg-[#d67643] text-white px-8 py-4 text-lg rounded-full transition-all duration-300 transform hover:scale-105"
                         >
-
                             <Link href="/booking">Experience the Difference</Link>
                         </Button>
                     </div>

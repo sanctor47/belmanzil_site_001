@@ -3,8 +3,10 @@
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { useEffect, useState } from "react"
+import Image from "next/image" // 1. Import the Image component
 
 const services = [
+    // ... your services array remains the same
     {
         name: "Examination & Digital X-Ray",
         specialty: "Detailed assessment using digital imaging to accurately diagnose dental issues.",
@@ -47,6 +49,7 @@ const services = [
     },
 ]
 
+
 export default function ServicesSlider() {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
@@ -55,9 +58,7 @@ export default function ServicesSlider() {
         if (!api) {
             return
         }
-
         setCurrent(api.selectedScrollSnap())
-
         api.on("select", () => {
             setCurrent(api.selectedScrollSnap())
         })
@@ -96,11 +97,15 @@ export default function ServicesSlider() {
                                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                                     <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden h-[442px]">
                                         {/* Image Container */}
-                                        <div className="relative overflow-hidden">
-                                            <img
-                                                src={service.image || "/placeholder.svg"}
+                                        <div className="relative overflow-hidden h-72"> {/* Set height on the container */}
+                                            {/* 2. Replace <img> with <Image> */}
+                                            <Image
+                                                src={service.image}
                                                 alt={service.name}
-                                                className="w-full h-72 object-cover"
+                                                fill // Use fill to make the image cover its container
+                                                priority={index < 3} // Prioritize loading the first few visible images
+                                                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                                                className="object-cover" // Use object-cover for cropping
                                             />
                                         </div>
                                         {/* Content */}
