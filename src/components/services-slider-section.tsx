@@ -6,57 +6,44 @@ import { useEffect, useState } from "react"
 
 const services = [
     {
-        name: "Consultation & Digital X-Ray",
-        specialty: "Comprehensive examination with portable digital X-ray technology",
+        name: "Examination & Digital X-Ray",
+        specialty: "Detailed assessment using digital imaging to accurately diagnose dental issues.",
         image: "/Examination.png",
     },
     {
-        name: "Cleaning & Scaling",
-        specialty: "Professional dental cleaning and plaque removal",
+        name: "Fillings",
+        specialty: "Restores cavities and cracks with safe, durable materials to protect your tooth.",
+        image: "/Filling.png",
+    },
+    {
+        name: "Cleaning",
+        specialty: "Gentle scaling and polishing to remove plaque and keep your smile fresh.",
         image: "/Cleaning.png",
     },
     {
-        name: "Fillings",
-        specialty: "Tooth-colored restorations using advanced materials",
-        image: "/Filling.png",
-    },
-
-    {
-        name: "Root Canal Treatment",
-        specialty: "Expert endodontic treatment by certified specialists",
-        image: "/department-1-768x509.jpg",
+        name: "Root Canal",
+        specialty: "Treats deep infections by removing damaged pulp and preserving the natural tooth.",
+        image: "/Root Canal.jpg",
     },
     {
-        name: "Minor Surgeries & Extractions",
-        specialty: "Oral surgery procedures performed safely at home",
-        image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-        name: "Gum Treatment",
-        specialty: "Periodontic care for healthy gums and supporting structures",
-        image: "/placeholder.svg?height=200&width=300",
-    },
-
-    {
-        name: "Teeth Whitening",
-        specialty: "Professional whitening treatments for a brighter smile",
-        image: "/placeholder.svg?height=200&width=300",
-    },
-    {
-        name: "Crowns, Bridges & Veneers",
-        specialty: "Cosmetic restorations for perfect smile aesthetics",
-        image: "/placeholder.svg?height=200&width=300",
-    },
-
-    {
-        name: "Braces & Aligners",
-        specialty: "Orthodontic treatment including traditional and clear aligners",
-        image: "/department-6-768x509.jpg",
+        name: "Crown & Bridge",
+        specialty: "Custom restorations to rebuild and replace teeth for strength and aesthetics.",
+        image: "/Crown & Bridge.jpg",
     },
     {
         name: "Dentures",
-        specialty: "Complete and partial dentures with perfect fit",
+        specialty: "Comfortable and functional solutions for partial or full tooth replacement.",
         image: "/Denture.jpg",
+    },
+    {
+        name: "Veneers",
+        specialty: "Thin, custom shells that enhance the shape and brightness of your natural teeth.",
+        image: "/Veneers.png",
+    },
+    {
+        name: "Children",
+        specialty: "Specialized, gentle care tailored to kids’ dental needs at every stage.",
+        image: "/Children.png",
     },
 ]
 
@@ -107,17 +94,14 @@ export default function ServicesSlider() {
                         <CarouselContent className="-ml-2 md:-ml-4">
                             {services.map((service, index) => (
                                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                                    <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden">
-                                        {/* <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2"> */}
+                                    <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden h-[442px]">
                                         {/* Image Container */}
                                         <div className="relative overflow-hidden">
                                             <img
                                                 src={service.image || "/placeholder.svg"}
                                                 alt={service.name}
-                                                // className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                                                 className="w-full h-72 object-cover"
                                             />
-                                            {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> */}
                                         </div>
                                         {/* Content */}
                                         <div className="p-6 text-center">

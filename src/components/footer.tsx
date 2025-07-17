@@ -26,36 +26,16 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Powered by */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-            <ul className="space-y-2 text-sm text-[#eedac2]/80">
-              <li>
-                <Link href="#" className="hover:text-[#e58754] transition-colors">
-                  General Dentistry
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-[#e58754] transition-colors">
-                  Root Canal Treatment
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-[#e58754] transition-colors">
-                  Cosmetic Dentistry
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-[#e58754] transition-colors">
-                  Orthodontics
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-[#e58754] transition-colors">
-                  Oral Surgery
-                </Link>
-              </li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-4">Powered by</h4>
+            <div className="space-y-3 text-sm">
+              <div className="text-[#eedac2]/80">Shawadfy Dental Clinic</div>
+              <div className="flex items-start space-x-2">
+                <MapPin className="w-4 h-4 text-[#e58754] mt-0.5" />
+                <span className="text-[#eedac2]/80">1, road 258, Maadi, Cairo</span>
+              </div>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -64,7 +44,7 @@ export function Footer() {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-[#e58754]" />
-                <span>+20 1XX XXX XXXX</span>
+                <span>0120 444 7957</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-[#e58754]" />
@@ -73,8 +53,8 @@ export function Footer() {
               <div className="flex items-start space-x-2">
                 <Clock className="w-4 h-4 text-[#e58754] mt-0.5" />
                 <div>
-                  <div>Daily: 9 AM - 8 PM</div>
-                  <div className="text-[#eedac2]/60">Emergency: 24/7</div>
+                  <div>6 Days a week: 10 AM - 6 PM</div>
+                  <div className="text-[#eedac2]/60">Friday: Emergency only</div>
                 </div>
               </div>
             </div>
@@ -84,7 +64,7 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Service Areas</h4>
             <ul className="space-y-2 text-sm text-[#eedac2]/80">
-              <li>Greater Cairo (Year-round)</li>
+              <li>Sahel (Seasonal)</li>
               <li>New Cairo</li>
               <li>Maadi</li>
               <li>Zamalek</li>
