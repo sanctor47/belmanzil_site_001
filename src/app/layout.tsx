@@ -29,16 +29,12 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({
-  children,
-  params: { locale },
+  children
 }: {
   children: React.ReactNode;
-  params: { locale: 'en' | 'ar' };
 }) {
-  const direction = dirMap[locale] ?? 'ltr';
-  console.log('Current locale:', locale, 'Direction:', direction);
   return (
-    <html lang={locale} dir={direction} className={`${montserrat.className} antialiased`}>
+    <html lang="en" className={`${montserrat.className} antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
