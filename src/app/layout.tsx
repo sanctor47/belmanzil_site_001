@@ -1,12 +1,14 @@
 import { Navigation } from '@/components/navbar';
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Noto_Sans_Arabic } from 'next/font/google';
 import { Footer } from '@/components/footer';
+import { Montserrat } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const notoArabic = Noto_Sans_Arabic({ subsets: ['arabic'], variable: '--font-arabic' });
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  display: 'swap', // Optional: Useful for avoiding FOUT
+});
 const dirMap = {
   en: 'ltr',
   ar: 'rtl',
@@ -36,7 +38,7 @@ export default async function RootLayout({
   const direction = dirMap[locale] ?? 'ltr';
   console.log('Current locale:', locale, 'Direction:', direction);
   return (
-    <html lang={locale} dir={direction} className={`${inter.variable} ${notoArabic.variable}`}>
+    <html lang={locale} dir={direction} className={`${montserrat.className} antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

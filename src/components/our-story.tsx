@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import Link from "next/link";
 
 const OurStory = () => {
     return (
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 bg-dutch-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         {/* Image Column */}
@@ -20,7 +19,7 @@ const OurStory = () => {
 
                         {/* Content Column */}
                         <div className="order-1 lg:order-2 space-y-6">
-                            <h1 className="text-4xl sm:text-5xl font-bold text-primary">
+                            <h1 className="text-4xl sm:text-5xl font-bold text-[#003b31]">
                                 A Clinic Reimagined for Your Home
                             </h1>
 
@@ -39,7 +38,7 @@ const OurStory = () => {
                                 </p>
                             </div>
 
-                            <div className="border-l-4 border-accent pl-6 bg-muted/30 p-6 rounded-r-xl">
+                            <div className="border-l-4 border-state-green pl-6 bg-dutch-white/30 p-6 rounded-r-xl ">
                                 <h3 className="text-xl font-semibold text-primary mb-3">
                                     Our Mission
                                 </h3>
@@ -70,10 +69,6 @@ const OurStory = () => {
                                 customized treatment with zero hassle, all in the comfort of your own space.
                                 Beyond convenience, we have a deep commitment to safety, comfort, and precision.
                             </p>
-
-                            {/* <p className="text-xl font-semibold text-primary text-center">
-                                We are a clinic reimagined for those who can't (or won't) go.
-                            </p> */}
                         </div>
 
                         <div className="text-center mt-8">
