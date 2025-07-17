@@ -16,7 +16,7 @@ const ProcessSection = () => {
       number: "02",
       title: "SELECTING A SPECIALIST",
       description: "Based on your chief complaint, we match you with one of our dental specialist. Each doctor brings years of experience in their field to ensure you receive the highest level of care.",
-      image: "Step-2.jpg"
+      image: "Step-2.png"
     },
     {
       number: "03",
