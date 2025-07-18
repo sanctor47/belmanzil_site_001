@@ -186,11 +186,11 @@ export default function OurTeamPage() {
               </div>
 
               {/* Quote */}
-              <blockquote className="border-l-4 border-[#003b31] pl-6 py-2 bg-white/20 rounded-r-lg mt-6">
+              {/* <blockquote className="border-l-4 border-[#003b31] pl-6 py-2 bg-white/20 rounded-r-lg mt-6">
                 <p className="italic text-[#003b31] font-medium text-lg">
                   "The future of dentistry lies not just in technology, but in re-imagining how and where care is delivered with people's health at the heart of every decision."
                 </p>
-              </blockquote>
+              </blockquote> */}
             </div>
           </div>
         </div>

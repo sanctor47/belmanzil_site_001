@@ -65,12 +65,7 @@ export function Footer() {
             <h4 className="text-lg font-semibold mb-4">Service Areas</h4>
             <ul className="space-y-2 text-sm text-[#eedac2]/80">
               <li>Sahel (Seasonal)</li>
-              <li>New Cairo</li>
-              <li>Maadi</li>
-              <li>Zamalek</li>
-              <li>El-Alamein (Summer)</li>
-              <li>Sidi Heneish (Summer)</li>
-              <li>Matrouh (Summer)</li>
+              <li>Greater Cairo</li>
             </ul>
           </div>
         </div>
@@ -80,12 +75,12 @@ export function Footer() {
             © {new Date().getFullYear()} Belmanzil. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
-            <Link href="#" className="text-[#eedac2]/60 hover:text-[#e58754] transition-colors">
+            {/* <Link href="#" className="text-[#eedac2]/60 hover:text-[#e58754] transition-colors">
               Privacy Policy
             </Link>
             <Link href="#" className="text-[#eedac2]/60 hover:text-[#e58754] transition-colors">
               Terms of Service
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
