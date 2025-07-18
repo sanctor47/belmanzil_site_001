@@ -15,71 +15,101 @@ export default function OurTeamPage() {
         </div>
 
         {/* Dr. Mohamed El Shawadfy */}
-        <div className="mb-24">
+        <div className="mb-12">
           <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg border border-white/20">
             <div className="max-w-4xl">
               <h2 className="text-3xl sm:text-4xl font-bold text-[#003b31] mb-3 leading-tight">
                 Dr. Mohamed El Shawadfy
               </h2>
               <h3 className="text-xl sm:text-2xl font-semibold text-[#003b31] mb-8 opacity-80">
-                Founder & CEO | Oral Surgeon & Implantologist
+                Founder/CEO | Oral Surgeon & Implantologist
               </h3>
               <div className="space-y-6 text-[#0f0f0f] leading-relaxed text-base sm:text-lg">
                 <p>
-                  Dr. Mohamed El Shawadfy is the visionary founder and CEO of BelManzil, Egypt's pioneering in-home
-                  dental service established in May 2020. A 2005 graduate of Cairo University, he furthered his
-                  expertise by earning a Master's Degree in Oral Surgery and Dental Implantology from Goethe University
-                  in Germany in 2016.
+                  Dr. El Shawadfy is the founder and CEO, and a graduated of Cairo University, and holds a Master's Degree in Oral Surgery and Dental Implantology from Goethe University, Germany. 
                 </p>
                 <p>
-                  His extensive background includes over 15 years in private practice and a 7-year tenure teaching in
-                  the Oral Surgery department at Misr International University (MIU).
+                  After establishing his private practice and operating for over 20 years in addition to teaching at Misr International University (MIU) for 7 years in the Oral Surgery department - Dr. El Shawadfy is redefining dentistry in Egypt and the Middle East. 
                 </p>
                 <p>
-                  The inspiration for BelManzil came from Dr. El Shawadfy's observation that elderly individuals over
-                  60, who were confined to their homes, lacked access to essential dental services. In response, he
-                  founded BelManzil to provide "premium full dental services" by assembling a team of highly skilled
-                  specialists who utilize state-of-the-art, fully mobile dental equipment.
+                  Transforming how care is delivered by bringing it directly to patients' homes for the very first time. Driven by deep dedication and a passion for service, he envisions a model where access is no longer a barrier.  His mission is clear: to extend high-quality dental care to those who may struggle to reach it-empowering comfort, dignity, and health at every doorstep. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Dr. Cherif Mansour */}
+        <div className="mb-12">
+          <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg border border-white/20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#003b31] mb-3 leading-tight">
+                Dr. Cherif Mansour
+              </h2>
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#003b31] mb-8 opacity-80">
+                BDS, MSc, PhD Fixed Prosthodontics
+              </h3>
+              <div className="space-y-6 text-[#0f0f0f] leading-relaxed text-base sm:text-lg">
+                <p>
+                  Dr. Cherif H. Mansour, a crown and bridge specialist with over a decade of clinical and academic experience, combines advanced digital dentistry with patient-centered care to restore confident, functional smiles. 
+                </p>
+                <p>
+                  As a faculty member at Misr International University, he brings precision and expertise to every treatment-from single restorations to complex rehabilitation. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Dr. Ahmed Wafaa */}
+        <div className="mb-12">
+          <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg border border-white/20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#003b31] mb-3 leading-tight">
+                Dr. Ahmed Wafaa
+              </h2>
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#003b31] mb-8 opacity-80">
+                Head of home dental specialists
+              </h3>
+              <div className="space-y-6 text-[#0f0f0f] leading-relaxed text-base sm:text-lg">
+                <p>
+                  A graduate of Misr International University (MIU), with BDs in Dentistry, Dr. Ahmed has been an inegral part of our team for the past 5 years. 
+                </p>
+                <p>
+                  He currently serves as Head of Dental Specilists at Belmanzil, and leads with clinical expertise, trusted patient care and a commitment to excellence in home dental service. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Amira Tarkhan */}
+        <div>
+          <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg border border-white/20">
+            <div className="max-w-4xl">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#003b31] mb-3 leading-tight">
+                Amira Tarkhan
+              </h2>
+              <h3 className="text-xl sm:text-2xl font-semibold text-[#003b31] mb-8 opacity-80">
+                Co-Founder/Chief Operation Officer (COO)
+              </h3>
+              <div className="space-y-6 text-[#0f0f0f] leading-relaxed text-base sm:text-lg">
+                <p>
+                  With over 15 years of experience in luxury service and business operations, Amira brings a rare blend of precision, empathy, and strategic insight to her role at Belmanzil. 
+                </p>
+                <p>
+                  As Co-Founder and Chief Operating Officer, she is a driving force behind Egypt's first in-home dental care service-an innovative model designed to bring clinical excellence directly to those who need it most.  Her belief in accessible, patient-centered care stems from a deep understanding of premium service delivery. 
                 </p>
                 <blockquote className="border-l-4 border-[#003b31] pl-6 py-2 bg-white/20 rounded-r-lg">
                   <p className="italic text-[#003b31] font-medium text-lg">
-                    "BelManzil does not replace the dental office, but rather is a complete solution for those unable to
-                    leave their home."
+                    "The future of dentistry lies not just in technology, but in re-imagining how and where care is delivered with people's health at the heart of every decision". 
                   </p>
                 </blockquote>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Dr. Sherif Mansour */}
-        <div>
-          <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg border border-white/20">
-            <div className="max-w-4xl">
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#003b31] mb-3 leading-tight">Dr. Sherif Mansour</h2>
-              <h3 className="text-xl sm:text-2xl font-semibold text-[#003b31] mb-8 opacity-80">
-                Prosthodontics Specialist
-              </h3>
-              <div className="space-y-6 text-[#0f0f0f] leading-relaxed text-base sm:text-lg">
-                <p>
-                  Dr. Sherif H. Mansour is a specialist in Fixed Prosthodontics, holding a BDS, MSc, and PhD in the
-                  field. With over a decade of both clinical and academic experience, he is dedicated to restoring
-                  healthy and confident smiles through advanced prosthodontic care and cutting-edge digital dentistry.
-                </p>
-                <p>
-                  Currently a faculty member at Misr International University, Dr. Mansour teaches the science that
-                  underpins restorative dentistry. He is recognized for his precision and a patient-centered approach
-                  that merges deep academic knowledge with clinical expertise.
-                </p>
-                <p>
-                  Dr. Mansour is proficient in addressing issues ranging from missing teeth to complex long-term
-                  rehabilitations, helping patients regain comfort, function, and the natural aesthetics of their
-                  smiles. His specializations at BelManzil include Crowns, Bridges, and Dentures (Prosthodontics).
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   )

@@ -13,31 +13,44 @@ import { Star } from "lucide-react"
 import { useEffect, useState } from "react"
 import Autoplay from "embla-carousel-autoplay"
 
+
+
+
 export function TestimonialsSection() {
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
 
   const testimonials = [
     {
-      name: "Sarah Ahmed",
-      location: "New Cairo",
+      name: "Dr. Nadia Philip Henein",
+      // location: "Zamalek",
       rating: 5,
-      text: "BelManzil saved me during my recovery period. The team was professional, caring, and brought everything needed for my treatment right to my home.",
-      treatment: "Post-surgery dental care",
+      text: `It gives me great pleasure to express how satisfied I was throughout my
+dental treatment executed by the talented and experienced specialists. All of
+them expressed extreme concern and high professionalism in treating me
+that commanded both my admiration and gratitude. I highly recommend
+them as an exquisite homogenous team-work group.`,
+      // treatment: "Routine cleaning & check-up",
     },
     {
-      name: "Mohamed Hassan",
-      location: "Zamalek",
+      name: "Professor, Doctor Amr Montasser",
+      // location: "Maadi",
       rating: 5,
-      text: "As a busy executive, I couldn't afford clinic visits. BelManzil's home service is exceptional - professional equipment, expert care, zero hassle.",
-      treatment: "Routine cleaning & check-up",
+      text: "Perfect Service. They came to my house in Marassi, fixed my denture and saved my vacation.",
+      // treatment: "Denture fitting",
     },
     {
-      name: "Fatma El-Sayed",
-      location: "Maadi",
+      name: "Mr. Karim Shehab",
+      // location: "New Cairo",
       rating: 5,
-      text: "My elderly mother needed dental care but couldn't travel. Dr. El Shawadfy and his team provided compassionate, expert treatment at home.",
-      treatment: "Denture fitting",
+      text: `For a son of a loving father who, due to illness and age, is now unfortunately
+unable to venture out of his home, BelManzil is a godsend. This professional
+company has introduced a much needed service to any dental patient that
+requires medical attention at home. They didn’t compromise when it came to
+hygiene, were punctual, and made the patient feel completely at ease during
+the whole procedure. I would highly recommend their services to anyone
+requiring dental care at home.`,
+      // treatment: "Post-surgery dental care",
     },
   ]
 
@@ -97,8 +110,8 @@ export function TestimonialsSection() {
                         {/* Author Info */}
                         <div className="border-t border-gray-200 pt-6">
                           <div className="font-bold text-[#003b31] text-lg">{testimonial.name}</div>
-                          <div className="text-[#0f0f0f]/60 mb-2">{testimonial.location}</div>
-                          <div className="text-[#e58754] text-sm font-medium">{testimonial.treatment}</div>
+                          {/* <div className="text-[#0f0f0f]/60 mb-2">{testimonial.location}</div> */}
+                          {/* <div className="text-[#e58754] text-sm font-medium">{testimonial.treatment}</div> */}
                         </div>
                       </div>
                     </CardContent>
@@ -118,9 +131,8 @@ export function TestimonialsSection() {
               <button
                 key={index}
                 onClick={() => api?.scrollTo(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === current ? "bg-[#e58754]" : "bg-[#003b31]/30"
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${index === current ? "bg-[#e58754]" : "bg-[#003b31]/30"
+                  }`}
               />
             ))}
           </div>
