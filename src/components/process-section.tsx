@@ -38,7 +38,7 @@ const ProcessSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-state-green mb-6">
-            Simplified Effective Processes
+            Simplified Appointment Journey
           </h2>
           <p className="text-xl text-smoky-black max-w-3xl mx-auto">
             Getting professional dental care at home is easier than you think. 

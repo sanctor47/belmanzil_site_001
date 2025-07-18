@@ -8,7 +8,9 @@ export function HeroSection() {
       {/* Optimized Background Image */}
       <div className="absolute inset-0 z-0">
         {/* Base Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#003b31] via-[#00352b] to-[#0f0f0f]"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#003b31] via-[#00352b] to-[#0f0f0f] "></div>
+        {/* <div className="absolute inset-0 bg-gradient-to-br from-[#003b31] via-[#00352b] to-[#0f0f0f] opacity-75"></div> */}
+
 
         {/* 2. Use the Next.js Image component */}
         <Image
@@ -16,7 +18,7 @@ export function HeroSection() {
           alt="A background image showing a serene dental care environment"
           fill // This makes the image cover the parent div
           priority // Prioritizes loading for this LCP element
-          className="object-cover opacity-20" // Ensures the image covers the area without distortion
+          className="object-cover opacity-60" // Ensures the image covers the area without distortion, used to be 20 percent opacity
         />
 
         {/* Overlay */}

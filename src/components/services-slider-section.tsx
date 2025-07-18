@@ -3,10 +3,9 @@
 import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { useEffect, useState } from "react"
-import Image from "next/image" // 1. Import the Image component
+import Image from "next/image"
 
 const services = [
-    // ... your services array remains the same
     {
         name: "Examination & Digital X-Ray",
         specialty: "Detailed assessment using digital imaging to accurately diagnose dental issues.",
@@ -98,7 +97,8 @@ export default function ServicesSlider() {
                                     <div className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-500 overflow-hidden h-[442px]">
                                         {/* Image Container */}
                                         <div className="relative overflow-hidden h-72"> {/* Set height on the container */}
-                                            {/* 2. Replace <img> with <Image> */}
+                                            {/* Background Overlay to normalize brightness */}
+                                            <div className="absolute inset-0 bg-[#003b31]/20 z-10"></div>
                                             <Image
                                                 src={service.image}
                                                 alt={service.name}
