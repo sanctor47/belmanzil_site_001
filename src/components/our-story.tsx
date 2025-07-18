@@ -18,7 +18,7 @@ const OurStory = () => {
             <div className="relative aspect-[4/3] max-h-[420px] rounded-2xl overflow-hidden shadow-[var(--shadow-medical)] block lg:hidden">
               <Image
                 src="/Story&Model.png"
-                alt="Dr. Mohamed El Shawadfy, Founder of BelManzil"
+                alt="Dr. Mohamed El Shawadfy, Founder of Belmanzil"
                 fill
                 sizes="100vw"
                 className="object-cover transition-all duration-500"
@@ -27,7 +27,7 @@ const OurStory = () => {
 
             <div className="space-y-4 text-lg leading-relaxed text-foreground/80">
               <p>
-                <strong className="text-primary">BelManzil</strong> is Egypt’s first home dental service, founded in May 2020 with one goal: making expert dental care accessible where it’s needed most—at home.
+                <strong className="text-primary">Belmanzil</strong> is Egypt’s first home dental service, founded in May 2020 with one goal: making expert dental care accessible where it’s needed most—at home.
               </p>
               <p>
                 Whether you are facing mobility limitations, balancing family responsibilities, or simply seeking a stress-free alternative to traditional clinics, our service is designed to offer you safety, convenience and stress free dental experience. For us, accessibility isn’t a catchphrase—it’s the foundation of how we care.
@@ -43,7 +43,7 @@ const OurStory = () => {
             <div className="relative aspect-[4/3] max-h-[420px] rounded-2xl overflow-hidden shadow-[var(--shadow-medical)]">
               <Image
                 src="/Story&Model.png"
-                alt="Dr. Mohamed El Shawadfy, Founder of BelManzil"
+                alt="Dr. Mohamed El Shawadfy, Founder of Belmanzil"
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-all duration-500"
@@ -56,7 +56,7 @@ const OurStory = () => {
         <div className="border-l-4 border-state-green pl-6 bg-dutch-white/30 p-6 rounded-r-xl ">
           <h3 className="text-xl font-semibold text-primary mb-3">Our Mission</h3>
           <p className="text-foreground/80 leading-relaxed">
-            At BelManzil, our service promise is centered on putting your comfort, safety, and convenience first. We bring the full clinic experience to your home—without compromise. From diagnosis to treatment, every detail is handled with precision, empathy, and professionalism. Because we believe dental treatment shouldn’t be something you work around—it should be built around you.
+            At Belmanzil, our service promise is centered on putting your comfort, safety, and convenience first. We bring the full clinic experience to your home—without compromise. From diagnosis to treatment, every detail is handled with precision, empathy, and professionalism. Because we believe dental treatment shouldn’t be something you work around—it should be built around you.
           </p>
         </div>
 

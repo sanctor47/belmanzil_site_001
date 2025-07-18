@@ -46,14 +46,14 @@ export function Navigation() {
           <Link href={homePath} className="flex items-center space-x-2">
             <Image
               src="/logo_icon_2.png"
-              alt="BelManzil Icon"
+              alt="Belmanzil Icon"
               width={40}
               height={40}
               className="h-8 w-auto md:hidden"
             />
             <Image
               src="/logo_full_2.png"
-              alt="BelManzil Logo"
+              alt="Belmanzil Logo"
               width={150}
               height={50}
               className="h-8 w-auto hidden md:block"

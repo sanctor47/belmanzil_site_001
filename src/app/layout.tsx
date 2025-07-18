@@ -15,12 +15,12 @@ const dirMap = {
 };
 
 export const metadata: Metadata = {
-  title: 'BelManzil - Egypt\'s First Home Dental Service',
+  title: 'Belmanzil - Egypt\'s First Home Dental Service',
   description: 'Professional dental care delivered to your home. Expert treatments, advanced technology, and personalized service in the comfort of your own space.',
   keywords: 'home dental care, dental services, Egypt, Cairo, dentist, oral surgery, dental implants',
-  authors: [{ name: 'BelManzil Team' }],
+  authors: [{ name: 'Belmanzil Team' }],
   openGraph: {
-    title: 'BelManzil - Home Dental Care',
+    title: 'Belmanzil - Home Dental Care',
     description: 'Professional dental care delivered to your home',
     type: 'website',
     locale: 'en_US',

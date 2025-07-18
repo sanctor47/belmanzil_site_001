@@ -4,50 +4,7 @@ import { Carousel, CarouselApi, CarouselContent, CarouselItem, CarouselNext, Car
 import Autoplay from "embla-carousel-autoplay"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-
-const services = [
-    {
-        name: "Examination & Digital X-Ray",
-        specialty: "Detailed assessment using digital imaging to accurately diagnose dental issues.",
-        image: "/Examination.png",
-    },
-    {
-        name: "Fillings",
-        specialty: "Restores cavities and cracks with safe, durable materials to protect your tooth.",
-        image: "/Filling.png",
-    },
-    {
-        name: "Cleaning",
-        specialty: "Gentle scaling and polishing to remove plaque and keep your smile fresh.",
-        image: "/Cleaning.png",
-    },
-    {
-        name: "Root Canal",
-        specialty: "Treats deep infections by removing damaged pulp and preserving the natural tooth.",
-        image: "/Root Canal.jpg",
-    },
-    {
-        name: "Crown & Bridge",
-        specialty: "Custom restorations to rebuild and replace teeth for strength and aesthetics.",
-        image: "/Crown & Bridge.jpg",
-    },
-    {
-        name: "Dentures",
-        specialty: "Comfortable and functional solutions for partial or full tooth replacement.",
-        image: "/Denture.jpg",
-    },
-    {
-        name: "Veneers",
-        specialty: "Thin, custom shells that enhance the shape and brightness of your natural teeth.",
-        image: "/Veneers.png",
-    },
-    {
-        name: "Children",
-        specialty: "Specialized, gentle care tailored to kids’ dental needs at every stage.",
-        image: "/Children.png",
-    },
-]
-
+import { Shield, ShieldCheck } from "lucide-react"
 
 export default function ServicesSlider() {
     const [api, setApi] = useState<CarouselApi>()
@@ -67,6 +24,8 @@ export default function ServicesSlider() {
     return (
         <section id="services" className="py-20 md:py-28 bg-gradient-to-br from-[#f5f1eb] to-[#eedac2]">
             <div className="container mx-auto px-4 max-w-7xl">
+
+
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#003b31] mb-6">Comprehensive Dental Care, Delivered</h2>
@@ -77,7 +36,7 @@ export default function ServicesSlider() {
                 </div>
 
                 {/* Carousel Container */}
-                <div className="relative max-w-6xl mx-auto">
+                <div className="relative max-w-6xl mx-auto mb-8">
                     <Carousel
                         setApi={setApi}
                         className="w-full"
@@ -125,7 +84,64 @@ export default function ServicesSlider() {
                         <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl border border-[#e58754]/20 text-[#e58754] hover:bg-[#e58754] hover:text-white transition-all duration-300" />
                     </Carousel>
                 </div>
+
+                {/* Safety Disclaimer Banner */}
+                <div className="mt-16 max-w-4xl mx-auto">
+                    <div className="bg-[#003b31] text-[#eedac2] rounded-xl p-4 flex items-center justify-center gap-4 shadow-lg border border-[#00352b]">
+                        <ShieldCheck className="h-8 w-8 flex-shrink-0" aria-hidden="true" />
+                        <p className="text-base sm:text-lg font-medium text-center">
+                            For your safety, we follow strict UK HTM 01-05 infection control guidelines.
+                        </p>
+                    </div>
+                </div>
+                {/* <div className="flex items-center justify-center bg-[#eedac2] border-l-4 border-[#e58754] text-[#0f0f0f] rounded-lg p-4 mb-8">
+                    <Shield className="text-2xl mr-2 text-[#e58754]" />
+                    <span className="font-medium">For your safety, we follow strict UK HTM 01-05 infection control guidelines.</span>
+                </div> */}
             </div>
         </section>
     )
 }
+
+const services = [
+    {
+        name: "Examination & Digital X-Ray",
+        specialty: "Detailed assessment using digital imaging to accurately diagnose dental issues.",
+        image: "/Examination.png",
+    },
+    {
+        name: "Fillings",
+        specialty: "Restores cavities and cracks with safe, durable materials to protect your tooth.",
+        image: "/Filling.png",
+    },
+    {
+        name: "Cleaning",
+        specialty: "Gentle scaling and polishing to remove plaque and keep your smile fresh.",
+        image: "/Cleaning.png",
+    },
+    {
+        name: "Root Canal",
+        specialty: "Treats deep infections by removing damaged pulp and preserving the natural tooth.",
+        image: "/Root Canal.jpg",
+    },
+    {
+        name: "Crown & Bridge",
+        specialty: "Custom restorations to rebuild and replace teeth for strength and aesthetics.",
+        image: "/Crown & Bridge.jpg", // Missing
+    },
+    {
+        name: "Dentures",
+        specialty: "Comfortable and functional solutions for partial or full tooth replacement.",
+        image: "/Denture.jpg",
+    },
+    {
+        name: "Veneers",
+        specialty: "Thin, custom shells that enhance the shape and brightness of your natural teeth.",
+        image: "/Veneers.png", // Missing
+    },
+    {
+        name: "Children",
+        specialty: "Specialized, gentle care tailored to kids’ dental needs at every stage.",
+        image: "/Children.png", // Missing
+    },
+]

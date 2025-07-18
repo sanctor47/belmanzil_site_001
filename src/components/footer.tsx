@@ -9,10 +9,10 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            {/* <h3 className="text-2xl font-bold mb-4">BelManzil</h3> */}
+            {/* <h3 className="text-2xl font-bold mb-4">Belmanzil</h3> */}
             <Image
               src="/logo_full_2.png"
-              alt="BelManzil Logo"
+              alt="Belmanzil Logo"
               width={150}
               height={50}
               className="h-8 w-auto mb-4"
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="border-t border-[#eedac2]/20 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-[#eedac2]/60 mb-4 md:mb-0">
-            © {new Date().getFullYear()} BelManzil. All rights reserved.
+            © {new Date().getFullYear()} Belmanzil. All rights reserved.
           </p>
           <div className="flex space-x-6 text-sm">
             <Link href="#" className="text-[#eedac2]/60 hover:text-[#e58754] transition-colors">

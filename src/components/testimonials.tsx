@@ -16,10 +16,6 @@ import Autoplay from "embla-carousel-autoplay"
 
 
 
-export function TestimonialsSection() {
-  const [api, setApi] = useState<CarouselApi>()
-  const [current, setCurrent] = useState(0)
-
   const testimonials = [
     {
       name: "Dr. Nadia Philip Henein",
@@ -44,7 +40,7 @@ them as an exquisite homogenous team-work group.`,
       // location: "New Cairo",
       rating: 5,
       text: `For a son of a loving father who, due to illness and age, is now unfortunately
-unable to venture out of his home, BelManzil is a godsend. This professional
+unable to venture out of his home, Belmanzil is a godsend. This professional
 company has introduced a much needed service to any dental patient that
 requires medical attention at home. They didn’t compromise when it came to
 hygiene, were punctual, and made the patient feel completely at ease during
@@ -53,6 +49,12 @@ requiring dental care at home.`,
       // treatment: "Post-surgery dental care",
     },
   ]
+
+
+export function TestimonialsSection() {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+
 
   useEffect(() => {
     if (!api) {
