@@ -2,30 +2,32 @@ import Image from "next/image";
 
 export default function OurTeamPage() {
   return (
-    <div className="pt-16 bg-[#eedac2] min-h-screen">
+    <main className="pt-12 bg-[#eedac2] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-
         {/* Page Header */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 mb-20">
-          
-          {/* Image Container */}
-          <div className="w-full lg:w-5/12">
-            <Image
-              src="/Step-3.png"
-              alt="Our dental team"
-              className="rounded-lg shadow-lg w-full h-auto object-cover aspect-[1/1]"
-              width={500}
-              height={500}
-              priority
-            />
-          </div>
 
           {/* Text Content Container */}
-          <div className="w-full lg:w-7/12 text-center lg:text-left">
+          <div className="w-full lg:w-7/12 lg:text-left lg:order-2">
+
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#003b31] mb-8 leading-tight">
               Meet Our Specialists
             </h1>
+
+            {/* Mobile‐only Image (under the title) */}
+            <div className="block lg:hidden mb-8">
+              <div className="relative aspect-[1/1] max-h-[420px] rounded-2xl overflow-hidden shadow-[var(--shadow-medical)]">
+                <Image
+                  src="/Step-3.png"
+                  alt="Our dental team"
+                  fill
+                  sizes="100vw"
+                  className="object-cover transition-all duration-500"
+                  priority
+                />
+              </div>
+            </div>
 
             {/* Content */}
             <p className="text-[#0f0f0f] text-lg sm:text-xl max-w-4xl mx-auto lg:mx-0 leading-relaxed mb-6">
@@ -39,8 +41,22 @@ export default function OurTeamPage() {
               </p>
             </blockquote>
           </div>
-        </div>
 
+          {/* Desktop‐only Image (left column on lg+) */}
+          <div className="hidden lg:block w-full lg:w-5/12 lg:order-1">
+            <div className="relative aspect-[1/1] max-h-[420px] rounded-2xl overflow-hidden shadow-[var(--shadow-medical)]">
+              <Image
+                src="/Step-3.png"
+                alt="Our dental team"
+                fill
+                sizes="100vw"
+                className="object-cover transition-all duration-500"
+                priority
+              />
+            </div>
+          </div>
+
+        </div>
         {/* Dr. Mohamed El Shawadfy */}
         <div className="mb-12">
           <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 sm:p-10 lg:p-12 shadow-lg border-l-4 border-state-green pl-6">
@@ -180,6 +196,8 @@ export default function OurTeamPage() {
         </div>
 
       </div>
-    </div>
+    </main>
   );
 }
+
+// ---- in the page herader component can you fix the ordering on mobile where on Mobile the order should be 1. title 2. Image 3. Text 4. Qoute, keeping the current layout on desktop
