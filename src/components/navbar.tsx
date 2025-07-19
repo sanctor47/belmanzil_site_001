@@ -29,10 +29,10 @@ export function Navigation() {
   }, [])
 
   const navItems = [
-    { label: dict.servicesNavItem, href: "#services", homeOnly: true },
-    { label: dict.processNavItem, href: "#process", homeOnly: true },
-    { label: dict.storyNavItem, href: "/story", homeOnly: false },
-    { label: dict.teamNavItem, href: "/team", homeOnly: false },
+    { label: "Services", href: "#services", homeOnly: true },
+    { label: "Journey", href: "#process", homeOnly: true },
+    { label: "Story", href: "/story", homeOnly: false },
+    { label: "Team", href: "/team", homeOnly: false },
   ]
 
   return (

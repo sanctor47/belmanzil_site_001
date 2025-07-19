@@ -70,11 +70,11 @@ export default function BookNowPage() {
 
                         {/* Additional reassurance */}
                         <div className="mt-8 p-6 bg-white rounded-lg shadow-sm border border-gray-200">
-                            <h4 className="font-semibold text-deep-teal mb-2">Why Choose BelManil?</h4>
+                            <h4 className="font-semibold text-deep-teal mb-2">Why Choose Belmanzil?</h4>
                             <ul className="space-y-2 text-sm text-smoky-black/80">
-                                <li>• Professional equipment brought to your home</li>
-                                <li>• Licensed specialists with years of experience</li>
-                                <li>• Strict safety and sterilization protocols</li>
+                                <li>• Dental Care brought to your door-step</li>
+                                <li>• Treatment that feels personal, not clinical</li>
+                                <li>• Your treatment is handled by team of specialists</li>
                                 <li>• Convenient scheduling that fits your lifestyle</li>
                             </ul>
                         </div>

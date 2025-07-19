@@ -29,9 +29,12 @@ export default function ServicesSlider() {
                 {/* Header */}
                 <div className="text-center mb-12">
                     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#003b31] mb-6">Comprehensive Dental Care, Delivered</h2>
-                    <p className="text-lg text-[#0f0f0f] max-w-3xl mx-auto">
+                    {/* <p className="text-lg text-[#0f0f0f] max-w-3xl mx-auto">
                         We provide a full range of dental services, all in the comfort of your home. Every treatment is
                         personalized, delivered using portable technology, and handled by specialists.
+                    </p> */}
+                    <p className="text-lg text-[#0f0f0f] max-w-3xl mx-auto">
+                        Experience the full spectrum of dental care—tailored entirely to you. Our specialists deliver the treatment you need, when and where you need it—right in the comfort of your home.
                     </p>
                 </div>
 
