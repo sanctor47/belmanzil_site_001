@@ -116,6 +116,7 @@ const services = [
         name: "Fillings",
         specialty: "Restores cavities and cracks with safe, durable materials to protect your tooth.",
         image: "/Filling.png",
+
     },
     {
         name: "Cleaning",
