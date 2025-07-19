@@ -130,7 +130,7 @@ const services = [
     {
         name: "Crown & Bridge",
         specialty: "Custom restorations to rebuild and replace teeth for strength and aesthetics.",
-        image: "/Crown & Bridge.jpg", // Missing
+        image: "/Crown and Bridge.png", // Missing
     },
     {
         name: "Dentures",
@@ -140,11 +140,11 @@ const services = [
     {
         name: "Veneers",
         specialty: "Thin, custom shells that enhance the shape and brightness of your natural teeth.",
-        image: "/Veneers.png", // Missing
+        image: "/Veneers.jpg", // Missing
     },
     {
         name: "Children",
         specialty: "Specialized, gentle care tailored to kids’ dental needs at every stage.",
-        image: "/Children.png", // Missing
+        image: "/Children.jpg", // Missing
     },
 ]
