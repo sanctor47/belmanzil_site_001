@@ -3,16 +3,13 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Footer } from '@/components/footer';
 import { Montserrat } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 
 const montserrat = Montserrat({
   subsets: ['latin'],
-  display: 'swap', // Optional: Useful for avoiding FOUT
+  display: 'swap',
 });
-const dirMap = {
-  en: 'ltr',
-  ar: 'rtl',
-};
 
 export const metadata: Metadata = {
   title: 'Belmanzil - Egypt\'s First Home Dental Service',
@@ -28,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children
 }: {
   children: React.ReactNode;
@@ -41,9 +38,10 @@ export default async function RootLayout({
       </head>
       <body className="font-inter antialiased bg-white text-smoky-black">
         <Navigation />
-        {children}
+        <main>{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-5GKDGTR5CC" />
       </body>
-    </html >
+    </html>
   );
 }

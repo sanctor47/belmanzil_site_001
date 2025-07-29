@@ -8,13 +8,13 @@ import { NextRequest, NextResponse } from "next/server";
 //   preferredTime: 'afternoon'
 // }
 
-    // Request Body Structure:
-	// PatientName    string `json:"patient_name"`
-	// PatientEmail   string `json:"patient_email"`
-	// PatientPhone   string `json:"patient_phone"`
-	// PatientAddress string `json:"patient_address"`
-	// ChiefComplaint string `json:"chief_complaint"`
-	// PatientNotes   string `json:"patient_notes,omitempty"`
+// Request Body Structure:
+// PatientName    string `json:"patient_name"`
+// PatientEmail   string `json:"patient_email"`
+// PatientPhone   string `json:"patient_phone"`
+// PatientAddress string `json:"patient_address"`
+// ChiefComplaint string `json:"chief_complaint"`
+// PatientNotes   string `json:"patient_notes,omitempty"`
 
 export async function POST(request: NextRequest) {
     try {
@@ -29,15 +29,22 @@ export async function POST(request: NextRequest) {
         // You can perform any necessary server-side logic here,
         // such as validation, database operations, etc.
 
-        if(!body.name || !body.email || !body.phone || !body.complaint) {
+        if (!body.name || !body.email || !body.phone || !body.complaint) {
             // If required fields are missing, return a 400 Bad Request response.
             return NextResponse.json({
                 message: 'Missing required fields'
             }, { status: 400 });
         }
 
+        if (body.gaClientId) {
+            // Log the Google Analytics Client ID if provided
+            console.log('Google Analytics Client ID:', body.gaClientId);
+        } else {
+            console.warn('Google Analytics Client ID not provided');
+        }
+
         // Send a request to an external API or perform other operations as needed.
-        const response = await fetch('https://admin.sudotechs.com/api/public/', {
+        const response = await fetch('http://127.0.0.1:6063/public/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -48,7 +55,9 @@ export async function POST(request: NextRequest) {
                 patient_phone: body.phone,
                 patient_address: body.address || '', // Optional field
                 chief_complaint: body.complaint,
-                patient_notes: body.notes || '' // Optional field
+                patient_notes: body.notes || '', // Optional field
+                preferred_call_time: body.preferredTime || '', // Optional field
+                ga_client_id: body.gaClientId || '' // Optional field
             })
         });
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Phone, Mail, User, FileText, Clock } from 'lucide-react';
+import { Phone, Mail, User, FileText, Clock, MapPin } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function BookingForm() {
@@ -9,6 +9,7 @@ export default function BookingForm() {
     name: '',
     email: '',
     phone: '',
+    address: '',
     complaint: '',
     preferredTime: ''
   });
@@ -23,9 +24,55 @@ export default function BookingForm() {
     }));
   };
 
+const getGAClientId = (): Promise<string> => {
+    return new Promise((resolve) => {
+      // Failsafe timeout in case gtag is blocked or fails to respond.
+      const timeoutId = setTimeout(() => {
+        console.warn('Google Analytics client ID retrieval timed out.');
+        resolve('');
+      }, 1500); // 1.5-second timeout
+
+      if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+        try {
+          // gtag uses a callback to provide the client_id.
+            window.gtag(
+            'get',
+            'G-5GKDGTR5CC',
+            'client_id',
+            (clientId: string) => {
+              clearTimeout(timeoutId); // Got the ID, so clear the timeout.
+              console.log('Google Analytics Client ID:', clientId);
+              resolve(clientId);
+            }
+            );
+        } catch (error) {
+          clearTimeout(timeoutId);
+          console.error('Error getting Google Analytics Client ID:', error);
+          resolve(''); // Resolve with empty string on error.
+        }
+      } else {
+        clearTimeout(timeoutId);
+        console.warn('gtag function not found on window object.');
+        resolve(''); // Resolve with empty string if gtag is not available.
+      }
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+
+    const clientId = await getGAClientId();
+
+    const data = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      address: formData.address,
+      complaint: formData.complaint,
+      preferredTime: formData.preferredTime,
+      gaClientId: clientId // Include Google Analytics Client ID
+    };
 
     // Simulate form submission
     const response = await fetch('/api/new-booking', {
@@ -33,7 +80,7 @@ export default function BookingForm() {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(data)
     });
     // await new Promise(resolve => setTimeout(resolve, 1500));
     if (!response.ok) {
@@ -137,7 +184,25 @@ export default function BookingForm() {
             />
           </div>
         </div>
-
+        {/* Address Field */}
+        <div>
+          <label htmlFor="address" className="block text-sm font-medium text-smoky-black mb-2">
+            Address *
+          </label>
+          <div className="relative">
+            <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
+            <input
+              type="text"
+              id="address"
+              name="address"
+              value={formData.address}
+              onChange={handleChange}
+              required
+              className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-state-green focus:border-transparent transition-all-smooth"
+              placeholder="Your address"
+            />
+          </div>
+        </div>
         {/* Chief Complaint */}
         <div>
           <label htmlFor="complaint" className="block text-sm font-medium text-smoky-black mb-2">
@@ -161,7 +226,7 @@ export default function BookingForm() {
         {/* Preferred Time */}
         <div>
           <label htmlFor="preferredTime" className="block text-sm font-medium text-smoky-black mb-2">
-            Preferred Time to Contact *
+            Preferred Time to Contact
           </label>
           <div className="relative">
             <Clock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
@@ -170,7 +235,7 @@ export default function BookingForm() {
               name="preferredTime"
               value={formData.preferredTime}
               onChange={handleChange}
-              required
+              // required
               className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-state-green focus:border-transparent transition-all-smooth appearance-none bg-white"
             >
               <option value="">Select preferred time</option>

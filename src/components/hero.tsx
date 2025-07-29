@@ -12,13 +12,22 @@ export function HeroSection() {
         {/* <div className="absolute inset-0 bg-gradient-to-br from-[#003b31] via-[#00352b] to-[#0f0f0f] opacity-75"></div> */}
 
 
-        {/* 2. Use the Next.js Image component */}
+        {/* Desktop Image: Hidden on mobile, visible on medium screens and up */}
         <Image
           src="/HeroSection.png"
           alt="A background image showing a serene dental care environment"
-          fill // This makes the image cover the parent div
-          priority // Prioritizes loading for this LCP element
-          className="object-cover opacity-60" // Ensures the image covers the area without distortion, used to be 20 percent opacity
+          fill
+          priority
+          className="hidden object-cover opacity-60 md:block" // <-- Changed
+        />
+
+        {/* Mobile Image: Visible on mobile, hidden on medium screens and up */}
+        <Image
+          src="/HeroSection-Mobile.png"
+          alt="A background image showing a serene dental care environment for mobile"
+          fill
+          priority
+          className="block object-cover opacity-60 md:hidden" // <-- Changed
         />
 
         {/* Overlay */}
