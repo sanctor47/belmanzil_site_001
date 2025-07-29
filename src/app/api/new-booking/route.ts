@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Send a request to an external API or perform other operations as needed.
-        const response = await fetch('http://127.0.0.1:6063/public/', {
+        const response = await fetch('https://admin.sudotechs.com/api/public/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
