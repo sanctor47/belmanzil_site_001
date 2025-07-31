@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
         }
 
         // Send a request to an external API or perform other operations as needed.
-        const response = await fetch('https://admin.sudotechs.com/api/public/', {
+        const response = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL as string, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -61,11 +61,21 @@ export async function POST(request: NextRequest) {
             })
         });
 
-        // Send a JSON response back to the client confirming receipt of the data.
-        return NextResponse.json({
-            message: 'Data received successfully!',
-            receivedData: body
-        });
+        if (!response.ok) {
+
+            // Send a JSON response back to the client confirming receipt of the data.
+            return NextResponse.json({
+                message: 'Data received successfully!',
+                receivedData: body
+            });
+        }
+        else {
+            // If the external API request fails, return a 500 Internal Server Error response.
+            return NextResponse.json({
+                message: 'Failed to process request',
+                error: 'External API request failed'
+            }, { status: 500 });
+        }
 
     } catch (error: any) {
         // Log any errors that occur during the process.

@@ -4,6 +4,8 @@ import type { Metadata } from 'next';
 import { Footer } from '@/components/footer';
 import { Montserrat } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Suspense } from 'react';
+import MetaPixel from '@/components/meta-pixel';
 
 
 const montserrat = Montserrat({
@@ -37,10 +39,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className="font-inter antialiased bg-white text-smoky-black">
+        <Suspense fallback={null}>
+          <MetaPixel />
+        </Suspense>
         <Navigation />
         <main>{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-5GKDGTR5CC" />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_MEASUREMENT_ID as string} />
       </body>
     </html>
   );
