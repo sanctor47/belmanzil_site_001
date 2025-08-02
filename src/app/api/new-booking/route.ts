@@ -26,7 +26,7 @@ type ExternalApiPayload = {
 
 export async function POST(request: NextRequest) {
     // 1. Validate that the backend URL is configured on the server.
-    const backendUrl = process.env.BACKEND_URL;
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
     if (!backendUrl) {
         console.error("Error: BACKEND_URL environment variable is not set.");
         return NextResponse.json(
